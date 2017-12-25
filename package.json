@@ -1,0 +1,23 @@
+{
+  "name": "stripe-wrapper",
+  "version": "0.0.1",
+  "description": "A wrapper for the wrapper of the stripe API.",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bennetthardwick/stripe-wrapper.git"
+  },
+  "keywords": [
+    "stripe",
+    "typescript"
+  ],
+  "author": "Bennett Hardwick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bennetthardwick/stripe-wrapper/issues"
+  },
+  "homepage": "https://github.com/bennetthardwick/stripe-wrapper#readme"
+}
