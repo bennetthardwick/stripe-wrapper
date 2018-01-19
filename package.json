@@ -29,5 +29,8 @@
     "gulp-typescript": "^3.2.3",
     "jasmine": "^2.8.0",
     "typescript": "^2.6.2"
+  },
+  "dependencies": {
+    "stripe": "^5.4.0"
   }
 }
