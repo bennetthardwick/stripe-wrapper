@@ -6,7 +6,8 @@
   "types": "definitions/index.d.ts",
   "scripts": {
     "test": "gulp test",
-    "release": "standard-version"
+    "release": "standard-version",
+    "build":"tsc"
   },
   "repository": {
     "type": "git",
