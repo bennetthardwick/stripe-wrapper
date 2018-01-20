@@ -5,7 +5,7 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build":"tsc"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -22,11 +22,12 @@
   },
   "homepage": "https://github.com/bennetthardwick/stripe-wrapper#readme",
   "devDependencies": {
-    "@types/node": "^8.5.2",
     "jasmine": "^2.8.0",
     "typescript": "^2.6.2"
   },
   "dependencies": {
-    "stripe": "^5.4.0"
+    "stripe": "^5.4.0",
+    "@types/node": "^8.5.2",
+    "@types/stripe": "^5.0.1"
   }
 }
