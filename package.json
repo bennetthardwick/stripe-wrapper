@@ -1,5 +1,5 @@
 {
-  "name": "stripe-wrapper",
+  "name": "fluent-interface-stripe",
   "version": "0.0.1",
   "description": "A wrapper for the wrapper of the stripe API.",
   "main": "dist/index.js",
