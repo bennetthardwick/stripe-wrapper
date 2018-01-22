@@ -21,7 +21,7 @@ export class Charge {
 
   /**
    * Set the amount to be charged.
-   * @param { amount: number } - Value of the transaction in cents.
+   * @param amount: number - Value of the transaction in cents.
    */
   amount(amount: number): Charge {
     this._charge.amount = amount;
@@ -30,7 +30,7 @@ export class Charge {
 
   /**
    * Set the desired currency of the transaction.
-   * @param { currency: string } [usd] - Three-letter ISO currency code. 
+   * @param currency: string [usd] - Three-letter ISO currency code. 
    */
   currency(currency: string): Charge {
     this._charge.currency = currency;
@@ -39,7 +39,7 @@ export class Charge {
 
   /**
    * Set the description of the transaction.
-   * @param { description: string } - Description of the transaction.
+   * @param description: string - Description of the transaction.
    */
   description(description: string): Charge {
     this._charge.description = description;
@@ -48,7 +48,7 @@ export class Charge {
 
   /**
    * Set various options of the transaction
-   * @param { options: charges.IChargeCreationOptions } - Object containing the transaction options.
+   * @param options: charges.IChargeCreationOptions - Object containing the transaction options.
    */
   options(options: charges.IChargeCreationOptions) {
     this._charge = Object.assign<charges.IChargeCreationOptions, charges.IChargeCreationOptions>(this._charge, options);
@@ -57,7 +57,7 @@ export class Charge {
 
   /**
    * Process the transaction
-   * @param { callback: IResponseFn<charges.ICharge> } - Callback to be executed after the transaction has been processed
+   * @param callback: IResponseFn<charges.ICharge> - Callback to be executed after the transaction has been processed
    */
   process(callback?: IResponseFn<charges.ICharge>): Customer | Charge {
     stripe.charges.create(this._charge, callback);
