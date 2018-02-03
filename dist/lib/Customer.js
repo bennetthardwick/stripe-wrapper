@@ -2,7 +2,9 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Customer = /** @class */ (function () {
     function Customer(source) {
-        this._customer.source = source;
+        this._customer = {};
+        if (source)
+            this._customer.source = source;
     }
     /**
      * Set the source of the customer's payment.

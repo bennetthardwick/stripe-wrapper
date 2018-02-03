@@ -10,10 +10,10 @@ export class Customer {
    */
   public id: string;
 
-  private _customer: customers.ICustomerCreationOptions;
+  private _customer: customers.ICustomerCreationOptions = { };
 
   constructor(source?: string) {
-      this._customer.source = source;
+      if (source) this._customer.source = source;
   }
 
   /**

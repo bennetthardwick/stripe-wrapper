@@ -60,9 +60,12 @@ export class Charge {
    * @param callback: IResponseFn<charges.ICharge> - Callback to be executed after the transaction has been processed
    */
   process(callback?: IResponseFn<charges.ICharge>): Customer | Charge {
-    stripe.charges.create(this._charge, callback);
-    if (this.customer) return this.customer;
-    else return this;
+
+    if (callback) stripe.charges.create(this._charge, callback);
+    else stripe.charges.create(this._charge);
+
+    return (this.customer) ? this.customer : this;
+
   }
   
 }

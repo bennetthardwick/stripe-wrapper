@@ -51,11 +51,11 @@ var Charge = /** @class */ (function () {
      * @param callback: IResponseFn<charges.ICharge> - Callback to be executed after the transaction has been processed
      */
     Charge.prototype.process = function (callback) {
-        Stripe_1.stripe.charges.create(this._charge, callback);
-        if (this.customer)
-            return this.customer;
+        if (callback)
+            Stripe_1.stripe.charges.create(this._charge, callback);
         else
-            return this;
+            Stripe_1.stripe.charges.create(this._charge);
+        return (this.customer) ? this.customer : this;
     };
     return Charge;
 }());

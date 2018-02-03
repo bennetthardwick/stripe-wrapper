@@ -4,7 +4,7 @@ var index_1 = require("../index");
 var visa = 'tok_visa';
 var visaDebit = 'tok_visa_debit';
 var masterCard = 'tok_mastercard';
-var stripe = index_1.Stripe('sk_...');
+var stripe = index_1.Stripe(process.env.STRIPE_SK);
 var charge = new index_1.Charge(visa);
 charge.amount(1000)
     .currency('usd')
