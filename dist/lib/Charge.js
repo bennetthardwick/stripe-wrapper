@@ -16,7 +16,7 @@ var Charge = /** @class */ (function () {
     }
     /**
      * Set the amount to be charged.
-     * @param { amount: number } - Value of the transaction in cents.
+     * @param amount: number - Value of the transaction in cents.
      */
     Charge.prototype.amount = function (amount) {
         this._charge.amount = amount;
@@ -24,7 +24,7 @@ var Charge = /** @class */ (function () {
     };
     /**
      * Set the desired currency of the transaction.
-     * @param { currency: string } [usd] - Three-letter ISO currency code.
+     * @param currency: string [usd] - Three-letter ISO currency code.
      */
     Charge.prototype.currency = function (currency) {
         this._charge.currency = currency;
@@ -32,7 +32,7 @@ var Charge = /** @class */ (function () {
     };
     /**
      * Set the description of the transaction.
-     * @param { description: string } - Description of the transaction.
+     * @param description: string - Description of the transaction.
      */
     Charge.prototype.description = function (description) {
         this._charge.description = description;
@@ -40,7 +40,7 @@ var Charge = /** @class */ (function () {
     };
     /**
      * Set various options of the transaction
-     * @param { options: charges.IChargeCreationOptions } - Object containing the transaction options.
+     * @param options: charges.IChargeCreationOptions - Object containing the transaction options.
      */
     Charge.prototype.options = function (options) {
         this._charge = Object.assign(this._charge, options);
@@ -48,7 +48,7 @@ var Charge = /** @class */ (function () {
     };
     /**
      * Process the transaction
-     * @param { callback: IResponseFn<charges.ICharge> } - Callback to be executed after the transaction has been processed
+     * @param callback: IResponseFn<charges.ICharge> - Callback to be executed after the transaction has been processed
      */
     Charge.prototype.process = function (callback) {
         Stripe_1.stripe.charges.create(this._charge, callback);
